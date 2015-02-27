@@ -43,7 +43,7 @@ client.posts('sdlovecraft.tumblr.com', function(err, blog){
 		
 		obj.latestPosts = latestPosts;
 		customizedTemplate =  ejs.render(emailTemplate, obj);
-
+        //console.log(customizedTemplate);
 		sendEmail(obj.firstName+" "+obj.lastName, obj.emailAddress,"Sam Hains",
 			"sdh@eml.cc","New Posts On The Lovecraft",customizedTemplate);
 
